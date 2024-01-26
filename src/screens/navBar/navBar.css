@@ -1,0 +1,25 @@
+.nav-section {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+}
+
+.nav-button {
+    text-decoration: none;
+    color: var(--black);
+    font-size: large;
+    border: none;
+    height: 100%;
+    width: 150px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.nav-middle-section {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
