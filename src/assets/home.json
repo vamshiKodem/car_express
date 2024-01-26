@@ -1,3 +1,79 @@
 {
-  "title": "Care Express"
+  "title": "Care Express",
+  "carCompanies": [
+    {
+      "id": 1,
+      "name": "Maruti Suzuki",
+      "image": "https://1000logos.net/wp-content/uploads/2022/08/Maruti-Suzuki-Logo-2000.png"
+    },
+    {
+      "id": 2,
+      "name": "Hyundai",
+      "image": "https://di-uploads-pod5.dealerinspire.com/triplejsaipan/uploads/2018/05/HyundaiLogoStacked_4cblk-1024x659.gif"
+    },
+    {
+      "id": 3,
+      "name": "Renault",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Renault_2009_logo.svg/2048px-Renault_2009_logo.svg.png"
+    },
+    {
+      "id": 4,
+      "name": "Honda",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Honda.svg/2560px-Honda.svg.png"
+    },
+    {
+      "id": 5,
+      "name": "Tata",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Tata_logo.svg/2231px-Tata_logo.svg.png"
+    },
+    {
+      "id": 6,
+      "name": "Ford",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Ford_logo_flat.svg/2560px-Ford_logo_flat.svg.png"
+    },
+    {
+      "id": 7,
+      "name": "Volkswagen",
+      "image": "https://uploads.vw-mms.de/system/production/images/vwn/030/145/images/7a0d84d3b718c9a621100e43e581278433114c82/DB2019AL01950_web_1600.jpg?1649155356"
+    },
+    {
+      "id": 8,
+      "name": "Mahindra",
+      "image": "https://i.pinimg.com/736x/17/38/ff/1738ff204f7eaaf912742070a0871f8e.jpg"
+    },
+    {
+      "id": 9,
+      "name": "BMW",
+      "image": "https://1000logos.net/wp-content/uploads/2018/02/BMW-Logo.png"
+    },
+    {
+      "id": 10,
+      "name": "Mercedes-benz",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Mercedes_Benz_Logo_11.jpg/1200px-Mercedes_Benz_Logo_11.jpg"
+    }
+  ],
+  "inputPlaceholders": {
+    "model": "model",
+    "color": "Color",
+    "yearOfManufacture": "Year of Manufacture",
+    "insuranceValidUpto": "Insurance Valid upto",
+    "kms": "Kms",
+    "location": "Location",
+    "numberOfOwners": "Number of Owners",
+    "transmission": "Transmission",
+    "externalFitments": "External Fitment",
+    "photo": "Photo"
+  },
+  "inputNames": {
+    "color": "color",
+    "externalFitments": "externalFitments",
+    "insuranceValidUpto": "insuranceValidUpto",
+    "kms": "kms",
+    "location": "location",
+    "model": "model",
+    "numberOfOwners": "numberOfOwners",
+    "transmission": "transmission",
+    "yearOfManufacture": "yearOfManufacture"
+  },
+  "submit": "Submit"
 }

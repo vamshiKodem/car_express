@@ -1,0 +1,54 @@
+.container {
+    background-color: var(--gray);
+    height: 100vh;
+    padding: 20px 50px;
+}
+
+.home-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    background-color: var(--gray);
+    margin-bottom: 40px;
+}
+
+.car-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 150px;
+    min-width: 100px;
+    border-radius: 5px;
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+.car-image {
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+}
+
+input {
+    height: 25px;
+    width: 200px;
+    padding-left: 10px;
+    margin: 5px 0px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column
+}
+
+.padding-left {
+    padding-left: 350px;
+}
