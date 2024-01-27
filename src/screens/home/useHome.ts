@@ -40,7 +40,7 @@ export const useHome = () => {
 
   const onFormSubmit = () => {
     dispatch(submit(carFormDetails));
-    navigate("/view");
+    navigate("/view", { state: { carFormDetails } });
   };
 
   const onChangeTextInputValue = (e: React.ChangeEvent<HTMLInputElement>) => {

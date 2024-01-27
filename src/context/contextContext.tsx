@@ -7,7 +7,7 @@ import carDetailViewContent from "../assets/carDetailView.json";
 interface ContentContextProps {
   homeContent: any;
   navContent: any;
-  carDetailView: any;
+  carDetailViewContent: any;
 }
 
 const ContentContext = createContext<ContentContextProps | undefined>(
@@ -27,7 +27,7 @@ export const ContentProvider = ({ children }: any): JSX.Element => {
   return (
     <ContentContext.Provider
       value={{
-        carDetailView: carDetailViewContent,
+        carDetailViewContent: carDetailViewContent,
         homeContent: homeContent,
         navContent: navBarContent,
       }}

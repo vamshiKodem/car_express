@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import { CarDetail } from "../../models/home";
 import { useContentContext } from "../../context/contextContext";
 import { useMemo, useState } from "react";
+import { useLocation } from "react-router-dom";
 import {
   BrandCheckboxItem,
   BudgetList,
@@ -41,9 +42,11 @@ const transmissionList: RadioButtonsProps[] = [
 
 export const useCarDetailView = () => {
   const carDetailValue = useSelector((state: CarDetail) => state);
+  const { state } = useLocation();
+  const { carFormDetails } = state;
 
-  const { carDetailView } = useContentContext();
-  const [selectedCity, setSelectedCity] = useState("");
+  const { carDetailViewContent } = useContentContext();
+  const [selectedCity, setSelectedCity] = useState(carFormDetails.location);
   const [searchInput, setSearchInput] = useState("");
   const [showSearchResult, setShowSearchResult] = useState(true);
   const [brandCheckBox, setBrandCheckBox] = useState(initialCheckboxes);
@@ -53,7 +56,7 @@ export const useCarDetailView = () => {
   const [transmission, setTransmission] = useState("");
 
   const searchResult = useMemo(() => {
-    return carDetailView.bodyTypeList.filter((data: string) =>
+    return carDetailViewContent.bodyTypeList.filter((data: string) =>
       data.toLowerCase().includes(searchInput.toLowerCase())
     );
   }, [searchInput]);
@@ -85,7 +88,7 @@ export const useCarDetailView = () => {
 
   return {
     selectedCity,
-    carDetailView,
+    carDetailViewContent,
     setSelectedCity,
     searchInput,
     setSearchInput,

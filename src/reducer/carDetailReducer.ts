@@ -15,7 +15,7 @@ const initialState: CarDetail = {
 };
 
 const counterSlice = createSlice({
-  name: "careDetailForm",
+  name: "carDetailForm",
   initialState,
   reducers: {
     submit: (state, carDetail: PayloadAction<CarDetail>) => {

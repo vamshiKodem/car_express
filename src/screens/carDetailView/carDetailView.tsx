@@ -10,7 +10,7 @@ export const CarDetailView = () => {
   const {
     selectedCity,
     setSelectedCity,
-    carDetailView,
+    carDetailViewContent,
     searchInput,
     setSearchInput,
     showSearchResult,
@@ -32,22 +32,22 @@ export const CarDetailView = () => {
 
   return (
     <div className="car-detail-container">
-      <h5>{carDetailView.filter}</h5>
-      <div>
-        <label>{carDetailView.location}</label>
+      <h5>{carDetailViewContent.filter}</h5>
+      <div className="car-detail-section">
+        <label>{carDetailViewContent.location}</label>
         <select
           value={selectedCity}
           onChange={(e) => setSelectedCity(e.target.value)}
         >
-          {carDetailView.showroomLocation.map((city: string) => (
+          {carDetailViewContent.showroomLocation.map((city: string) => (
             <option value={city} key={city}>
               {city}
             </option>
           ))}
         </select>
       </div>
-      <div>
-        <label>{carDetailView.bodyType}</label>
+      <div className="car-detail-section">
+        <label>{carDetailViewContent.bodyType}</label>
         <div className="input-container">
           <FaSearch className="search-icon" />
           <input
@@ -72,8 +72,8 @@ export const CarDetailView = () => {
           </div>
         ) : null}
       </div>
-      <div>
-        <label>{carDetailView.brand}</label>
+      <div className="car-detail-section">
+        <label>{carDetailViewContent.brand}</label>
         <div className="brand-container">
           {brandCheckBox.map((item) => (
             <div className="brand-list">
@@ -88,30 +88,32 @@ export const CarDetailView = () => {
           ))}
         </div>
       </div>
-      <div>
-        <label>{carDetailView.owner}</label>
+      <div className="car-detail-section">
+        <label>{carDetailViewContent.owner}</label>
         {carOwnerList.map((owner) => (
           <RadioButton
             key={owner.id}
             value={owner.value}
-            name={carDetailView.owner}
+            name={carDetailViewContent.owner}
             onChange={() => {
               setCarOwner(owner.value);
             }}
           />
         ))}
       </div>
-      <div>
-        <h6>{carDetailView.budget}</h6>
-        {budgetButtons.map((budget) => (
-          <FloatingButton
-            name={budget.budget}
-            onClick={() => setBudget(budget.budget)}
-          />
-        ))}
+      <div className="car-detail-section">
+        <h6> {carDetailViewContent.budget}</h6>
+        <div className="floating-button-container">
+          {budgetButtons.map((budget) => (
+            <FloatingButton
+              name={budget.budget}
+              onClick={() => setBudget(budget.budget)}
+            />
+          ))}
+        </div>
       </div>
-      <div>
-        <h6></h6>
+      <div className="car-detail-section">
+        <h6>{carDetailViewContent.fuelType}</h6>
         {fuelTypeList.map((fuelType) => (
           <RadioButton
             key={fuelType.id}
@@ -121,8 +123,8 @@ export const CarDetailView = () => {
           />
         ))}
       </div>
-      <div>
-        <h6></h6>
+      <div className="car-detail-section">
+        <h6>{carDetailViewContent.transmission}</h6>
         {transmissionList.map((type) => (
           <RadioButton
             key={type.id}

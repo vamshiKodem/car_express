@@ -46,6 +46,18 @@ select {
     border-radius: 3px;
 }
 
-option {
-    height: 50px;
+
+.car-detail-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.floating-button-container {
+    width: 200px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
