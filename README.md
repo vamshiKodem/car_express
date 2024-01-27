@@ -1,6 +1,6 @@
 # car_express
 
-### `npm start` to run in devlopment servier
+### clone the project and run `npm start` to run locally
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
