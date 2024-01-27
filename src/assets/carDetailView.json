@@ -1,0 +1,21 @@
+{
+  "showroomLocation": [
+    "Mumbai",
+    "Delhi",
+    "Bangalore",
+    "Hyderabad",
+    "Chennai",
+    "Kolkata",
+    "Ahmedabad",
+    "Pune",
+    "Jaipur",
+    "Lucknow"
+  ],
+  "filter": "Filter",
+  "bodyType": "Body Type",
+  "bodyTypeList": ["Hatchback", "Sedan", "SUV"],
+  "brand": "Brand",
+  "location": "Location",
+  "owner": "Owner",
+  "budget": "Budget"
+}

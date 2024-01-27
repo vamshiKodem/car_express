@@ -30,7 +30,7 @@
     object-fit: contain;
 }
 
-input {
+.form-input {
     height: 25px;
     width: 200px;
     padding-left: 10px;

@@ -1,0 +1,11 @@
+.floating-button {
+  height: 30px;
+  width: auto;
+  border-radius: 15px;
+  border: solid 1px var(--gray);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

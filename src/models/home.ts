@@ -14,5 +14,5 @@ export interface CarDetail {
   numberOfOwners: string;
   transmission: string;
   externalFitments: string;
-  photo?: string;
+  photo: string;
 }

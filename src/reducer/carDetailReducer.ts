@@ -11,6 +11,7 @@ const initialState: CarDetail = {
   numberOfOwners: "",
   transmission: "",
   yearOfManufacture: "",
+  photo: "",
 };
 
 const counterSlice = createSlice({

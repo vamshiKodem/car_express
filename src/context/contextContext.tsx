@@ -2,10 +2,12 @@ import { createContext, useContext } from "react";
 
 import homeContent from "../assets/home.json";
 import navBarContent from "../assets/navBar.json";
+import carDetailViewContent from "../assets/carDetailView.json";
 
 interface ContentContextProps {
   homeContent: any;
   navContent: any;
+  carDetailView: any;
 }
 
 const ContentContext = createContext<ContentContextProps | undefined>(
@@ -24,7 +26,11 @@ export const useContentContext = () => {
 export const ContentProvider = ({ children }: any): JSX.Element => {
   return (
     <ContentContext.Provider
-      value={{ homeContent: homeContent, navContent: navBarContent }}
+      value={{
+        carDetailView: carDetailViewContent,
+        homeContent: homeContent,
+        navContent: navBarContent,
+      }}
     >
       {children}
     </ContentContext.Provider>

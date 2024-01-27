@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 import { useContentContext } from "../../context/contextContext";
 import { CarDetail, CarList } from "../../models/home";
@@ -15,11 +16,13 @@ const initialState: CarDetail = {
   numberOfOwners: "",
   transmission: "",
   yearOfManufacture: "",
+  photo: "",
 };
 
 export const useHome = () => {
   const { homeContent } = useContentContext();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const carDetailValue = useSelector((state: CarDetail) => state);
   // this is how we access the redux state
 
@@ -28,12 +31,16 @@ export const useHome = () => {
 
   const onCarListClick = (car: CarList) => {
     setForm(true);
-    setCarFormDetails((prev) => ({ ...prev, model: car.name }));
+    setCarFormDetails((prev) => ({
+      ...prev,
+      model: car.name,
+      photo: car.image,
+    }));
   };
 
-  const onFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const onFormSubmit = () => {
     dispatch(submit(carFormDetails));
+    navigate("/view");
   };
 
   const onChangeTextInputValue = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -52,5 +59,6 @@ export const useHome = () => {
     onFormSubmit,
     carFormDetails,
     onChangeTextInputValue,
+    carDetailValue,
   };
 };
